@@ -127,10 +127,8 @@ public class TTTConsoleNonOO2P {
 	 */
 	private static boolean hasWon(int theSeed, int currentRow, int currentCol) {
 		return (isHorizontallyComplete(theSeed, currentRow) || isVerticallyComplete(theSeed, currentCol)
-				|| currentRow == currentCol // 3-in-the-diagonal
-						&& isDiagonallyComplete(theSeed)
-				|| currentRow + currentCol == DIMENSION - 1 // 3-in-the-opposite-diagonal
-						&& isDiagonallyOppositeComplete(theSeed));
+				|| currentRow == currentCol && isDiagonallyComplete(theSeed)
+				|| currentRow + currentCol == DIMENSION - 1 && isDiagonallyOppositeComplete(theSeed));
 	}
 
 	private static boolean isHorizontallyComplete(int theSeed, int currentRow) {
