@@ -14,6 +14,10 @@ public class Execution1 {
 
 		int[] arr = new int[] {};
 		System.out.println(arr.length);
+
+		System.out.println("-----------");
+
+		System.out.println(UUID.fromString(null));
 	}
 
 	private static void printArray(int[] numbers) {
