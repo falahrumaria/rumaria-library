@@ -1,23 +1,17 @@
 package myTrial;
 
-import java.util.UUID;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Execution1 {
 
 	public static void main(String[] args) {
-		String str = "HOMETYPE.01";
-		System.out.println(str.split("\\.")[1]);
-		String[] col = "avb".split("\\.");
-		System.out.println(col.length);
-
-		System.out.println("-----------");
-
-		int[] arr = new int[] {};
-		System.out.println(arr.length);
-
-		System.out.println("-----------");
-
-		System.out.println(UUID.fromString(null));
+		List<Integer> list = new LinkedList<>();
+		list.add(6);
+		list.add(9);
+		list.add(0);
+		list.add(4, 5);
+		printArray(list);
 	}
 
 	private static void printArray(int[] numbers) {
@@ -26,4 +20,19 @@ public class Execution1 {
 		}
 	}
 
+	private static void printArray(List<Integer> numbers) {
+		for (int i = 0; i < numbers.size(); i++) {
+			System.out.println(numbers.get(i));
+		}
+	}
+
+	public boolean isPalindrome(int x) {
+		String str = String.valueOf(x);
+		for (int i = 0; i < str.length() / 2; i++) {
+			if (str.charAt(i) != str.charAt(str.length() - 1 - i)) {
+				return false;
+			}
+		}
+		return true;
+	}
 }

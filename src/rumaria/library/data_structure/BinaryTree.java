@@ -1,4 +1,4 @@
-package rumaria.library;
+package rumaria.library.data_structure;
 
 public class BinaryTree<T> extends Tree<T> {
 	

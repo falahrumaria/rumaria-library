@@ -1,54 +1,89 @@
 package myTrial;
 
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.function.*;
-import java.util.regex.*;
-import java.util.stream.*;
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.toList;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Solution {
 
-	// Complete the compareTriplets function below.
-	static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
-		if (a.size() != 3 || a.size() != 3) {
-			throw new IllegalArgumentException();
-		}
-		Integer scoreA = 0;
-		Integer scoreB = 0;
-		List<Integer> result = new ArrayList<Integer>();
-		for (int i = 0; i < a.size(); i++) {
-			if (a.get(i) > b.get(i)) {
-				scoreA++;
-			} else if (a.get(i) < b.get(i)) {
-				scoreB++;
-			}
-		}
-		result.add(scoreA);
-		result.add(scoreB);
-		return result;
+	public static void main(String[] args) {
+		int[] nums = { 0, 3, 0, 1, 1, -1, -5, -5, 3, -3, -3, 0 };
+		System.out.println(-5 % 10);
+		System.out.println(reverse(2147483647));
 	}
 
-	public static void main(String[] args) throws IOException {
-		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+	public static int reverse(int x) {
+		boolean digitStarter = true;
+		int currentDivRemainder = 0;
+		StringBuilder sb = new StringBuilder();
+		if (x < 0) {
+			sb.append('-');
+			x *= -1;
+		}
+		while (x > 0) {
+			currentDivRemainder = x % 10;
+			x /= 10;
+			if (digitStarter && currentDivRemainder == 0) {
+				continue;
+			}
+			digitStarter = false;
+			sb.append(currentDivRemainder);
+		}
+		try {
+			return Integer.valueOf(sb.toString());
+		} catch (NumberFormatException e) {
+			return 0;
+		}
+	}
 
-		List<Integer> a = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" ")).map(Integer::parseInt)
-				.collect(toList());
+	public static List<List<Integer>> threeSum(int[] nums) {
+		List<List<Integer>> list = new ArrayList<>();
+		for (int i = 0; i < nums.length - 2; i++) {
+			for (int j = i + 1; j < nums.length - 1; j++) {
+				for (int k = j + 1; k < nums.length; k++) {
+					if (nums[i] + nums[j] + nums[k] == 0) {
+						List<Integer> listChild = new ArrayList<>();
+						listChild.add(nums[i]);
+						listChild.add(nums[j]);
+						listChild.add(nums[k]);
+						if (!combinationExists(list, listChild)) {
+							list.add(listChild);
+						}
+					}
+				}
+			}
+		}
+		return list;
+	}
 
-		List<Integer> b = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" ")).map(Integer::parseInt)
-				.collect(toList());
+	private static boolean combinationExists(List<List<Integer>> list, List<Integer> newListChild) {
+		for (List<Integer> listChild : list) {
+			if (!listIsUnique(listChild, newListChild)) {
+				return true;
+			}
+		}
+		return false;
+	}
 
-		List<Integer> result = compareTriplets(a, b);
+	private static boolean listIsUnique(List<Integer> listChild, List<Integer> newListChild) {
+		for (Integer x : listChild) {
+			if (!equalsOneOf(x, newListChild)) {
+				return true;
+			}
+		}
+		for (int x : newListChild) {
+			if (!equalsOneOf(x, listChild)) {
+				return true;
+			}
+		}
+		return false;
+	}
 
-		bufferedWriter.write(result.stream().map(Object::toString).collect(joining(" ")) + "\n");
-
-		bufferedReader.close();
-		bufferedWriter.close();
+	private static boolean equalsOneOf(int x, List<Integer> newListChild) {
+		for (int num : newListChild) {
+			if (x == num) {
+				return true;
+			}
+		}
+		return false;
 	}
 }

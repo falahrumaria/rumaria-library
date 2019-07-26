@@ -1,4 +1,4 @@
-package myTrial;
+package rumaria.library;
 
 public class ParseDate {
 

@@ -1,4 +1,4 @@
-package rumaria.library;
+package rumaria.library.data_structure;
 
 import java.util.ArrayList;
 import java.util.List;
