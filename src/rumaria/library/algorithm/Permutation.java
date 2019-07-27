@@ -14,13 +14,13 @@ public class Permutation {
 		printPermutation(arr);
 	}
 
-	public static <T> List<List<T>> permutate(Collection<T> c) {
+	public static <T> List<List<T>> getPermutation(Collection<T> c) {
 		Queue<T> q = new LinkedList<>();
 		q.addAll(c);
 		return permutate(q);
 	}
 
-	public static <T> List<List<T>> permutate(T[] array) {
+	public static <T> List<List<T>> getPermutation(T[] array) {
 		Queue<T> q = new LinkedList<>();
 		q.addAll(Arrays.asList(array));
 		return permutate(q);
@@ -50,8 +50,8 @@ public class Permutation {
 		return listParent;
 	}
 
-	public static <T> void printPermutation(Collection<T> array) {
-		List<List<T>> permutationList = permutate(array);
+	public static <T> void printPermutation(Collection<T> c) {
+		List<List<T>> permutationList = getPermutation(c);
 		for (List<T> list : permutationList) {
 			for (T ch : list) {
 				System.out.print(ch + ", ");
@@ -60,8 +60,8 @@ public class Permutation {
 		}
 	}
 
-	public static <T> void printPermutation(T[] q) {
-		List<List<T>> permutationList = permutate(q);
+	public static <T> void printPermutation(T[] array) {
+		List<List<T>> permutationList = getPermutation(array);
 		for (List<T> list : permutationList) {
 			for (T ch : list) {
 				System.out.print(ch + ", ");
