@@ -1,6 +1,8 @@
 package rumaria.library.algorithm;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
@@ -8,22 +10,23 @@ import java.util.Queue;
 public class Permutation {
 
 	public static void main(String[] args) {
-		Queue<Character> q = new LinkedList<>();
-		q.add('1');
-		q.add('2');
-		q.add('3');
-		q.add('4');
-		q.add('5');
-		printPermutation(q);
+		Integer[] arr = { 1, 2, 3, 4, 5, 6, 7, 8 };
+		printPermutation(arr);
 	}
 
-	public static <T> List<List<T>> permutate(List<T> list) {
+	public static <T> List<List<T>> permutate(Collection<T> c) {
 		Queue<T> q = new LinkedList<>();
-		q.addAll(list);
+		q.addAll(c);
 		return permutate(q);
 	}
 
-	public static <T> List<List<T>> permutate(Queue<T> q) {
+	public static <T> List<List<T>> permutate(T[] array) {
+		Queue<T> q = new LinkedList<>();
+		q.addAll(Arrays.asList(array));
+		return permutate(q);
+	}
+
+	private static <T> List<List<T>> permutate(Queue<T> q) {
 		if (q.size() == 1) {
 			List<List<T>> list = new ArrayList<>();
 			List<T> list1 = new LinkedList<>();
@@ -47,7 +50,17 @@ public class Permutation {
 		return listParent;
 	}
 
-	public static <T> void printPermutation(Queue<T> q) {
+	public static <T> void printPermutation(Collection<T> array) {
+		List<List<T>> permutationList = permutate(array);
+		for (List<T> list : permutationList) {
+			for (T ch : list) {
+				System.out.print(ch + ", ");
+			}
+			System.out.println();
+		}
+	}
+
+	public static <T> void printPermutation(T[] q) {
 		List<List<T>> permutationList = permutate(q);
 		for (List<T> list : permutationList) {
 			for (T ch : list) {
