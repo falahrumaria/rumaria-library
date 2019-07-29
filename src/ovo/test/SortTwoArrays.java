@@ -6,7 +6,6 @@ import java.util.Queue;
 public class SortTwoArrays {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int[] arr1 = { 1, 13, 20, 30, 90, 100 };
 		int[] arr2 = { 11, 22 };
 		printArray(sortTwoArrays(arr1, arr2));
