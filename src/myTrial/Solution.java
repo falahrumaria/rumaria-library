@@ -1,38 +1,15 @@
 package myTrial;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Solution {
 
     public static void main(String[] args) {
         int[] nums = {0, 3, 0, 1, 1, -1, -5, -5, 3, -3, -3, 0};
         System.out.println(-5 % 10);
-        System.out.println(reverse(2147483647));
-    }
-
-    public static int reverse(int x) {
-        boolean digitStarter = true;
-        int currentDivRemainder = 0;
-        StringBuilder sb = new StringBuilder();
-        if (x < 0) {
-            sb.append('-');
-            x *= -1;
-        }
-        while (x > 0) {
-            currentDivRemainder = x % 10;
-            x /= 10;
-            if (digitStarter && currentDivRemainder == 0) {
-                continue;
-            }
-            digitStarter = false;
-            sb.append(currentDivRemainder);
-        }
-        try {
-            return Integer.valueOf(sb.toString());
-        } catch (NumberFormatException e) {
-            return 0;
-        }
     }
 
     public static List<List<Integer>> threeSum(int[] nums) {
@@ -86,4 +63,5 @@ public class Solution {
         }
         return false;
     }
+
 }
