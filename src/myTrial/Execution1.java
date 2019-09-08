@@ -1,12 +1,16 @@
 package myTrial;
 
+import java.math.BigDecimal;
 import java.util.*;
 
 public class Execution1 {
 
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
-        System.out.println(list.get(0));
+        for (int i = 0; i < 10; i++) {
+            System.out.println("nilai i sekarang : " + i);
+
+
+        }
 
     }
 
@@ -22,4 +26,25 @@ public class Execution1 {
         }
     }
 
+    public boolean canJump(int[] nums) {
+        int i = 0;
+        while (i < nums.length) {
+            if (nums[i] == 0 && i < nums.length - 1 && !canPassZeroElement(i, nums)) {
+                return false;
+            }
+            i++;
+        }
+        return true;
+    }
+
+    private boolean canPassZeroElement(int index, int[] nums) {
+        int currentIndex = index - 1;
+        while (currentIndex > -1) {
+            if (nums[currentIndex] > nums[index] + index - currentIndex) {
+                return true;
+            }
+            currentIndex--;
+        }
+        return false;
+    }
 }

@@ -1,0 +1,12 @@
+
+^squid:S1854";Remove this useless assignment to local variable "personF".(µôì¶ÿÿÿÿÿ8Õğ÷¡È-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(´òÇÜşÿÿÿÿ8Õğ÷¡È-
+Osquid:S1481",Remove this unused "personF" local variable.(µôì¶ÿÿÿÿÿ8Õğ÷¡È-
+Dsquid:S1172A"&Remove these unused method parameters.(ñşÈ¡8Õğ÷¡È-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(áÉö…8Õğ÷¡È-
+Msquid:S5411:"*Use the primitive boolean expression here.(ÍÑµüÿÿÿÿ8ê²³©È-
+Rsquid:S28649"4Iterate over the "entrySet" instead of the "keySet".(ôÚŠÁ8ê²³©È-
+Jsquid:S1481",Remove this unused "personD" local variable.(¦àı8Õğ÷¡È-
+Ysquid:S1854";Remove this useless assignment to local variable "personD".(¦àı8Õğ÷¡È-

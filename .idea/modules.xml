@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/myTrial.iml" filepath="$PROJECT_DIR$/myTrial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rumaria-lib.iml" filepath="$PROJECT_DIR$/rumaria-lib.iml" />
     </modules>
   </component>
 </project>

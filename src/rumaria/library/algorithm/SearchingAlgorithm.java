@@ -3,21 +3,12 @@ package rumaria.library.algorithm;
 public class SearchingAlgorithm {
 
     public static void main(String[] args) {
-        int[] array = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 29};
-        System.out.println(doBinarySearch(array, 2));
-        System.out.println(doBinarySearch(array, 4));
-        System.out.println(doBinarySearch(array, 6));
-        System.out.println(doBinarySearch(array, 8));
-        System.out.println(doBinarySearch(array, 11));
-        System.out.println(doBinarySearch(array, 12));
-        System.out.println(doBinarySearch(array, 14));
-        System.out.println(doBinarySearch(array, 16));
-        System.out.println(doBinarySearch(array, 18));
-        System.out.println(doBinarySearch(array, 29));
+
     }
 
     /**
      * the binary search
+     *
      * @param array
      * @param target
      * @return the index at where the target is found or -1 when it is not found
@@ -41,10 +32,9 @@ public class SearchingAlgorithm {
     }
 
     /**
-     *
      * @param nums
      * @param target
-     * @return the index at where the target is found or where the target should be
+     * @return the index at where the target is found or where the target should be when it is not found
      */
     public static int searchInsert(int[] nums, int target) {
         int baseIndex = 0;
@@ -62,5 +52,56 @@ public class SearchingAlgorithm {
             return midIndex + 1;
         }
         return midIndex;
+    }
+
+    /**
+     * binary search with recursive implementation
+     *
+     * @param key
+     * @param a
+     * @param lo
+     * @param hi
+     * @return the index at where the target is found or -1 when it is not found
+     */
+    public static int rank(int key, int[] a, int lo, int hi) {
+        if (lo > hi) return -1;
+        int mid = lo + (hi - lo) / 2;
+        if (key < a[mid]) return rank(key, a, lo, mid - 1);
+        else if (key > a[mid]) return rank(key, a, mid + 1, hi);
+        else return mid;
+    }
+
+    /**
+     * binary search with recursive implementation
+     *
+     * @param key
+     * @param a
+     * @param lo
+     * @param hi
+     * @return the index at where the target is found or -1 when it is not found
+     */
+    public static int rank1(int key, int[] a, int lo, int hi) {
+        if (lo > hi) return -1;
+        int mid = lo + (hi - lo) / 2;
+        if (key < a[mid]) return rank(key, a, lo, mid - 1);
+        else if (key > a[mid]) return rank(key, a, mid + 1, hi);
+        else return mid;
+    }
+
+    /**
+     * binary search with recursive implementation
+     *
+     * @param key
+     * @param a
+     * @param lo
+     * @param hi
+     * @return the index at where the target is found or -1 when it is not found
+     */
+    public static int rank2(int key, int[] a, int lo, int hi) {
+        if (lo > hi) return -1;
+        int mid = lo + (hi - lo) / 2;
+        if (key < a[mid]) return rank(key, a, lo, mid - 1);
+        else if (key > a[mid]) return rank(key, a, mid + 1, hi);
+        else return mid;
     }
 }
