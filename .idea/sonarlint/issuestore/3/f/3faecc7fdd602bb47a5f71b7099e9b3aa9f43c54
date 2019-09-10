@@ -1,0 +1,29 @@
+
+jsquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(­ü‹Øüÿÿÿÿ
+esquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(şÇßã
+esquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(º³€Í
+jsquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(´°şİşÿÿÿÿ
+esquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(¶Õƒ—
+esquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(Ê÷µ¾
+esquid:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(ÔØô
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(·ùßóıÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(Î«
+gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(º³€Í
+S"squid:SwitchLastCaseIsDefaultCheck""Add a default case to this switch.(¼œóÛüÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(ã×„úÿÿÿÿ
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(õ·¸ûÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(§ÛÌß
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(§æ‡
+R
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ô—¨êúÿÿÿÿ
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(û˜ß“
+M
+squid:S106"9Replace this use of System.out or System.err by a logger.(ŞÀÈ
+esquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(²ó§¦ùÿÿÿÿ

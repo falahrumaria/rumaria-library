@@ -1,0 +1,11 @@
+
+V
+squid:S106	"9Replace this use of System.out or System.err by a logger.(ÛÜ´Î8´´¹Ñ-
+~squid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(€Ê Ğúÿÿÿÿ8´´¹Ñ-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ö›çÂıÿÿÿÿ8´´¹Ñ-
+[squid:UnusedPrivateMethod"/Remove this unused private "printArray" method.(®÷©8´´¹Ñ-
+\squid:UselessImportCheck"1Remove this unused import 'java.math.BigDecimal'.(êêŠ8´´¹Ñ-
+[squid:UnusedPrivateMethod"/Remove this unused private "printArray" method.(¼ìÒ§8´´¹Ñ-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(¢ÿšç8´´¹Ñ-

@@ -6,12 +6,7 @@ import java.util.*;
 public class Execution1 {
 
     public static void main(String[] args) {
-        for (int i = 0; i < 10; i++) {
-            System.out.println("nilai i sekarang : " + i);
-
-
-        }
-
+        System.out.println(5 * 1.0 / 2);
     }
 
     private static void printArray(int[] numbers) {
