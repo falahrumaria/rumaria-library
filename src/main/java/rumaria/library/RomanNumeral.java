@@ -5,81 +5,46 @@ import java.util.Map;
 
 public class RomanNumeral {
 
-    public static void main(String[] args) {
-        int num = 2572;
-        System.out.println(intToRoman(num));
-        System.out.println(romanToInt(intToRoman(num)));
-    }
-
-    public static int romanToInt(String s) {
-        final Map<Character, Integer> map = new HashMap<Character, Integer>() {
-            {
-                put('I', 1);
-                put('V', 5);
-                put('X', 10);
-                put('L', 50);
-                put('C', 100);
-                put('D', 500);
-                put('M', 1000);
-            }
-        };
-        int allSum = 0;
+    /**
+     * @param romanNum
+     * @return
+     */
+    public static int romanToInt(String romanNum) {
+        final String message = "invalid roman number : " + romanNum;
         int num;
-        int i = 0;
-        while (i < s.length()) {
-            char ch = s.charAt(i);
-            num = map.get(ch);
-            switch (ch) {
-                case 'I':
-                    i++;
-                    if (i < s.length() && (s.charAt(i) == 'V' || s.charAt(i) == 'X')) {
-                        allSum += map.get(s.charAt(i)) - num;
-                        i++;
-                    } else {
-                        allSum += num;
-                    }
-                    break;
-                case 'X':
-                    i++;
-                    if (i < s.length() && (s.charAt(i) == 'L' || s.charAt(i) == 'C')) {
-                        allSum += map.get(s.charAt(i)) - num;
-                        i++;
-                    } else {
-                        allSum += num;
-                    }
-                    break;
-                case 'C':
-                    i++;
-                    if (i < s.length() && (s.charAt(i) == 'D' || s.charAt(i) == 'M')) {
-                        allSum += map.get(s.charAt(i)) - num;
-                        i++;
-                    } else {
-                        allSum += num;
-                    }
-                    break;
-                default:
-                    allSum += num;
-                    i++;
-                    break;
-            }
+        int result = doConvert(romanNum, message);
+        boolean reverseConvert;
+        try {
+            reverseConvert = romanNum.equals(intToRoman(result));
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException(message);
         }
-        return allSum;
+        if (!reverseConvert) {
+            throw new IllegalArgumentException(message);
+        }
+        return result;
     }
 
+    /**
+     * @param num in the range 0 < num < 4000
+     * @return
+     */
     public static String intToRoman(int num) {
-        final Map<Byte, char[]> map = new HashMap<Byte, char[]>() {
-            {
-                put((byte) 0, new char[]{'I', 'V', 'X'});
-                put((byte) 1, new char[]{'X', 'L', 'C'});
-                put((byte) 2, new char[]{'C', 'D', 'M'});
-                put((byte) 3, new char[]{'M', 'M', 'M'});
-            }
-        };
+        if (num < 1 || num > 3999) {
+            throw new IllegalArgumentException("input argument is beyond the scope of roman number");
+        }
+        final Map<Integer, char[]> map = new HashMap<>();
+        map.put(0, new char[]{'I', 'V', 'X'});
+        map.put(1, new char[]{'X', 'L', 'C'});
+        map.put(2, new char[]{'C', 'D', 'M'});
+        map.put(3, new char[]{'M', 'M', 'M'});
+
         String numAsStr = String.valueOf(num);
         StringBuilder sb = new StringBuilder();
+
         for (int i = 0; i < numAsStr.length(); i++) {
             char ch = numAsStr.charAt(i);
-            byte key = (byte) (numAsStr.length() - 1 - i);
+            int key = numAsStr.length() - 1 - i;
             switch (ch) {
                 case '1':
                     sb.append(map.get(key)[0]);
@@ -112,5 +77,66 @@ public class RomanNumeral {
             }
         }
         return sb.toString();
+    }
+
+    private static int doConvert(String romanNum, String message) {
+        final Map<Character, Integer> romanCharValueMap = getRomanCharValueMap();
+        int result = 0;
+        int num;
+        int i = 0;
+        while (i < romanNum.length()) {
+            char ch = romanNum.charAt(i);
+            try {
+                num = romanCharValueMap.get(ch);
+            } catch (NullPointerException e) {
+                throw new IllegalArgumentException(message);
+            }
+            switch (ch) {
+                case 'I':
+                    i++;
+                    if (i < romanNum.length() && (romanNum.charAt(i) == 'V' || romanNum.charAt(i) == 'X')) {
+                        result += romanCharValueMap.get(romanNum.charAt(i)) - num;
+                        i++;
+                    } else {
+                        result += num;
+                    }
+                    break;
+                case 'X':
+                    i++;
+                    if (i < romanNum.length() && (romanNum.charAt(i) == 'L' || romanNum.charAt(i) == 'C')) {
+                        result += romanCharValueMap.get(romanNum.charAt(i)) - num;
+                        i++;
+                    } else {
+                        result += num;
+                    }
+                    break;
+                case 'C':
+                    i++;
+                    if (i < romanNum.length() && (romanNum.charAt(i) == 'D' || romanNum.charAt(i) == 'M')) {
+                        result += romanCharValueMap.get(romanNum.charAt(i)) - num;
+                        i++;
+                    } else {
+                        result += num;
+                    }
+                    break;
+                default:
+                    result += num;
+                    i++;
+                    break;
+            }
+        }
+        return result;
+    }
+
+    private static Map<Character, Integer> getRomanCharValueMap() {
+        final Map<Character, Integer> map = new HashMap<>();
+        map.put('I', 1);
+        map.put('V', 5);
+        map.put('X', 10);
+        map.put('L', 50);
+        map.put('C', 100);
+        map.put('D', 500);
+        map.put('M', 1000);
+        return map;
     }
 }
