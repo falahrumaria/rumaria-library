@@ -1,12 +1,6 @@
 
-zsquid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8ñœ¯†Ñ-
-zsquid:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ8ñœ¯†Ñ-
-Hsquid:S3599",Use another way to initialize this instance.(î·8ñœ¯†Ñ-
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ÿ¨µıÿÿÿÿ8Äü–„Ñ-
-ssquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(¨Ü±•üÿÿÿÿ8ñœ¯†Ñ-
-g
-squid:S128"LEnd this switch case with an unconditional break, return or throw statement.(©ÓÌâ8ñœ¯†Ñ-
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(œÚüç8ñœ¯†Ñ-
-Msquid:S3599",Use another way to initialize this instance.(ÚäÏøÿÿÿÿ8ñœ¯†Ñ-
+psquid:S3776R"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(Æ¶ù8”øàÚÑ-
+i
+squid:S128:"LEnd this switch case with an unconditional break, return or throw statement.(©ÓÌâ8Çé¢ÚÑ-
+Xsquid:S1118":Add a private constructor to hide the implicit public one.(ûùÈ—8Çé¢ÚÑ-
+Ksquid:S1481"(Remove this unused "num" local variable.(“®´Üúÿÿÿÿ8”øàÚÑ-
