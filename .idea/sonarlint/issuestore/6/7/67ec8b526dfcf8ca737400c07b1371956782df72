@@ -1,19 +1,19 @@
 
 V
-squid:S106"9Replace this use of System.out or System.err by a logger.(ê¨·²8š±£³Ó-
-V
 squid:S106"9Replace this use of System.out or System.err by a logger.(ğ³õ 8ºÿßŸÔ-
 V
-squid:S106
-"9Replace this use of System.out or System.err by a logger.(Í‘å„8ºÿßŸÔ-
-[
-squid:S106 "9Replace this use of System.out or System.err by a logger.(¯«Í¥ıÿÿÿÿ8¬øÕÌÔ-
+squid:S106"9Replace this use of System.out or System.err by a logger.(Ë“İÛ8š±£³Ó-
 [
 squid:S106"9Replace this use of System.out or System.err by a logger.(˜¹şõùÿÿÿÿ8š±£³Ó-
-V
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ë“İÛ8š±£³Ó-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(¯«Í¥ıÿÿÿÿ8Ö‰ÓÌÔ-
+[
+squid:S106 "9Replace this use of System.out or System.err by a logger.(¯«Í¥ıÿÿÿÿ8¬øÕÌÔ-
 \squid:UselessImportCheck"1Remove this unused import 'java.math.BigDecimal'.(êêŠ8š±£³Ó-
 V
 squid:S106	"9Replace this use of System.out or System.err by a logger.(ÅÕÊ»8š±£³Ó-
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(¯«Í¥ıÿÿÿÿ8Ö‰ÓÌÔ-
+V
+squid:S106
+"9Replace this use of System.out or System.err by a logger.(Í‘å„8ºÿßŸÔ-
+V
+squid:S106"9Replace this use of System.out or System.err by a logger.(ê¨·²8š±£³Ó-

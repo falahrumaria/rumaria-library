@@ -1,9 +1,5 @@
 package rumaria.library.lambda_basics.unit2;
 
-interface Process {
-    void process(int i);
-}
-
 public class ClosuresExample {
 
     public static void main(String[] args) {

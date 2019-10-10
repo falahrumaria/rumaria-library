@@ -25,7 +25,7 @@ S
 a
 1src/main/java/rumaria/test/xtremax/Solution1.java,9\a\9a1d0609b5c1efad3648eb40ee1731e31fc61ac4
 R
-"src/main/java/rumaria/Rumaria.java,6\7\67ec8b526dfcf8ca737400c07b1371956782df72
+"src/main/java/rumaria/Rumaria.java,6/7/67ec8b526dfcf8ca737400c07b1371956782df72
 j
 :src/main/java/rumaria/library/ds/SinglyLinkedListNode.java,d\f\dfc822aeb6ee38e7fd17d6b86e69397867677985
 c
@@ -49,6 +49,8 @@ Ksrc/main/java/rumaria/library/lambda_basics/unit1/TypeInferenceExample.java,7\
 Å
 Qsrc/main/java/rumaria/library/lambda_basics/unit1/Unit1ExerciseSolutionJava8.java,3\c\3c0f6f565dff70931cff19d2fcee4bf4ce2cdc78
 ä
-Zsrc/main/java/rumaria/library/lambda_basics/unit2/StandardFunctionalInterfacesExample.java,7\9\794f96038b89a532d670e115157d99932e0da7ad
+Zsrc/main/java/rumaria/library/lambda_basics/unit2/StandardFunctionalInterfacesExample.java,7/9/794f96038b89a532d670e115157d99932e0da7ad
 
 Osrc/main/java/rumaria/library/lambda_basics/unit2/ExceptionHandlingExample.java,a\2\a2d291a14c0977cd89182368f365da20f9f51b2c
+{
+Ksrc/main/java/rumaria/library/lambda_basics/unit2/ThisReferenceExample.java,5/0/508bebae86615f46032c08b9ed7087d7c170bb87

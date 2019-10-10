@@ -1,7 +1,5 @@
 package rumaria.test.xtremax;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 public class LiveCoding1 {
     /**
      * Special Number
@@ -15,7 +13,7 @@ public class LiveCoding1 {
      *
      * @param args
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         testResult(6, specialSummation(100000005));
         testResult(4, specialSummation(900000607));
 
@@ -45,10 +43,10 @@ public class LiveCoding1 {
      * @param number Non negative integer to sum
      * @return Summation of Special Number
      */
-    private static int specialSummation(int number) {
+    private static int specialSummation(int number) throws Exception {
         // AMEND YOUR CODE BELOW THIS LINE
         if (number < 0) {
-            throw new NotImplementedException();
+            throw new Exception();
         }
         if (number < 10) {
             return number;
@@ -78,10 +76,10 @@ public class LiveCoding1 {
      * @param number Non negative integer to multiply
      * @return Multiplication of Special Numbber
      */
-    private static int specialMultiplication(int number) {
+    private static int specialMultiplication(int number) throws Exception {
         // AMEND YOUR CODE BELOW THIS LINE
         if (number < 0) {
-            throw new NotImplementedException();
+            throw new Exception();
         }
         if (number < 10) {
             return number;
