@@ -2,23 +2,33 @@ package techprimers.java_streams;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class MapperExample {
 
     public static void main(String[] args) {
         List<String> names = Arrays.asList("Peter", "Sam", "Greg", "Ryan");
 
-        // this code
+        // this code (imperative style)
         for (String name : names) {
             if (!name.equals("Sam")) {
-                System.out.println(name);
+                User user = new User(name);
+                System.out.println(user);
             }
         }
 
-        // is equivalent to
+        // is equivalent to (functional style)
         names.stream().filter(name -> !name.equals("Sam"))
                 .map(User::new)
                 .forEach(System.out::println);
+
+        // collect example
+        List<User> users = names.stream().filter(name -> !name.equals("Sam"))
+                .map(User::new).collect(Collectors.toList());
+
+        // mapToInt example
+        int sum = users.stream().mapToInt(user -> user.getAge()).sum();
+        System.out.println(sum);
     }
 
     static class User {

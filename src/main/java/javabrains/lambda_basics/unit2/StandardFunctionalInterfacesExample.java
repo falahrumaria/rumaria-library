@@ -22,7 +22,7 @@ public class StandardFunctionalInterfacesExample {
 
 //        Step 2: Create a method that prints elements in the list
         System.out.println("print all");
-        printConditionally(people, p -> true, p -> System.out.println(p));
+        printConditionally(people, p -> true, System.out::println);
 
 //        Step 3: Create a method that prints all people with a condition as an argument
         System.out.println("print all people whose last name starts with C");
@@ -30,6 +30,8 @@ public class StandardFunctionalInterfacesExample {
 
         System.out.println("print all people whose first name starts with C");
         printConditionally(people, p -> p.getFirstName().startsWith("C"), p -> System.out.println(p.getFirstName()));
+
+        people.forEach(System.out::println);
     }
 
     private static void printConditionally(List<Person> people, Predicate<Person> predicate, Consumer<Person> consumer) {

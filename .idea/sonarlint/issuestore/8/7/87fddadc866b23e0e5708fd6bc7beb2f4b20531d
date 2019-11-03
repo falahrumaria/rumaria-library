@@ -1,8 +1,0 @@
-
-~squid:S1217"`Call the method Thread.start() to execute the content of the run() method in a dedicated thread.(§£äã8å†£Ù-
-[
-squid:S106	"9Replace this use of System.out or System.err by a logger.(šÒá¤ùÿÿÿÿ8å†£Ù-
-Ksquid:S1604"(Make this anonymous inner class a lambda(ĞˆÓ˜ûÿÿÿÿ8å†£Ù-
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(‰µ”…şÿÿÿÿ8¹²Ù-
-~squid:S1217"`Call the method Thread.start() to execute the content of the run() method in a dedicated thread.(Êâ†‹8¶Ú³Ù-

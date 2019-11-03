@@ -1,14 +1,0 @@
-
-[
-squid:S1060"9Replace this use of System.out or System.err by a logger.(úõ–áùÿÿÿÿ8çĞ°ùÙ-
-[
-squid:S106"9Replace this use of System.out or System.err by a logger.(í©şıÿÿÿÿ8ÄÎãúÙ-
-Fsquid:S1604&"(Make this anonymous inner class a lambda(ª§–Â8ç‚åúÙ-
-[
-squid:S1067"9Replace this use of System.out or System.err by a logger.(úõ–áùÿÿÿÿ8øŒúÙ-
-Fsquid:S1604"(Make this anonymous inner class a lambda(ª§–Â8‘÷ÎúÙ-
-V
-squid:S106"9Replace this use of System.out or System.err by a logger.(‹Ğ÷€8ÂÌâúÙ-
-V
-squid:S106%"9Replace this use of System.out or System.err by a logger.(¤µ¿´8ç‚åúÙ-
-Fsquid:S1604"(Make this anonymous inner class a lambda(öÖÙ†8Ò‰ÖøÙ-

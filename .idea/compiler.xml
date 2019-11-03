@@ -9,8 +9,5 @@
         <module name="rumaria-lib" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8">
-      <module name="rumaria-lib" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

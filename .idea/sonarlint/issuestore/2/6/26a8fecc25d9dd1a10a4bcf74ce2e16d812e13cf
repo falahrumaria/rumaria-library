@@ -1,9 +1,0 @@
-
-Bsquid:S1481"&Remove this unused "n" local variable.(“âÃ8«‰ø¸Í-
-Y
-squid:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8·Êã½Í-
-Qsquid:S1854"5Remove this useless assignment to local variable "n".(“âÃ8«‰ø¸Í-
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(Ñ…8·Êã½Í-
-ssquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 37 to the 15 allowed.(øä£şşÿÿÿÿ8˜î¬ïÌ-
-bsquid:UnusedPrivateMethod"3Remove this unused private "printTheMatrix" method.(ºÌÏÂùÿÿÿÿ8·Êã½Í-
