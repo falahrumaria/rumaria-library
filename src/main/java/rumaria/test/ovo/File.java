@@ -2,11 +2,11 @@ package rumaria.test.ovo;
 
 public class File {
 
-	String name;
+  String name;
 
-	public File(String name) {
-		super();
-		this.name = name;
-	}
-	
+  public File(String name) {
+    super();
+    this.name = name;
+  }
+
 }

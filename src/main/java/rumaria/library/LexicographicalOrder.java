@@ -2,8 +2,8 @@ package rumaria.library;
 
 public class LexicographicalOrder {
 
-	public static void main(String[] args) {
-		// input two array sizes
+  public static void main(String[] args) {
+    // input two array sizes
 //        Console.Write("Enter char array size 1 : ");
 //        int size1 = int.Parse(Console.ReadLine());
 //        Console.Write("Enter char array size 2 : ");
@@ -81,6 +81,6 @@ public class LexicographicalOrder {
 //                Console.WriteLine(" is first in lexicographical order.");
 //            }
 //        }
-	}
+  }
 
 }

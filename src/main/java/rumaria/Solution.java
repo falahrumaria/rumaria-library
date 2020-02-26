@@ -5,63 +5,32 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Solution {
+class Solution {
 
     public static void main(String[] args) {
-        int[] nums = {0, 3, 0, 1, 1, -1, -5, -5, 3, -3, -3, 0};
-        System.out.println(-5 % 10);
+
     }
 
-    public static List<List<Integer>> threeSum(int[] nums) {
-        List<List<Integer>> list = new ArrayList<>();
-        for (int i = 0; i < nums.length - 2; i++) {
-            for (int j = i + 1; j < nums.length - 1; j++) {
-                for (int k = j + 1; k < nums.length; k++) {
-                    if (nums[i] + nums[j] + nums[k] == 0) {
-                        List<Integer> listChild = new ArrayList<>();
-                        listChild.add(nums[i]);
-                        listChild.add(nums[j]);
-                        listChild.add(nums[k]);
-                        if (!combinationExists(list, listChild)) {
-                            list.add(listChild);
-                        }
-                    }
-                }
-            }
-        }
-        return list;
+    public List<String> letterCombinations(String digits) {
+        Map<String, char[]> map = new HashMap<>();
+        map.put("2", new char[]{'a', 'b', 'c'});
+        map.put("3", new char[]{'d', 'e', 'f'});
+        map.put("4", new char[]{'g', 'h', 'i'});
+        map.put("5", new char[]{'j', 'k', 'l'});
+        map.put("6", new char[]{'m', 'n', 'o'});
+        map.put("7", new char[]{'p', 'q', 'r', 's'});
+        map.put("8", new char[]{'t', 'u', 'v'});
+        map.put("9", new char[]{'w', 'x', 'y', 'z'});
+
+
     }
 
-    private static boolean combinationExists(List<List<Integer>> list, List<Integer> newListChild) {
-        for (List<Integer> listChild : list) {
-            if (!listIsUnique(listChild, newListChild)) {
-                return true;
-            }
-        }
-        return false;
-    }
+    private List<String> combineLetterGroups(char[]... letterGroups) {
+        StringBuilder sb = new StringBuilder();
+        int len = letterGroups.length;
+        int index = 0;
+        for (int i = 0; i < letterGroups[index].length; i++) {
 
-    private static boolean listIsUnique(List<Integer> listChild, List<Integer> newListChild) {
-        for (Integer x : listChild) {
-            if (!equalsOneOf(x, newListChild)) {
-                return true;
-            }
         }
-        for (int x : newListChild) {
-            if (!equalsOneOf(x, listChild)) {
-                return true;
-            }
-        }
-        return false;
     }
-
-    private static boolean equalsOneOf(int x, List<Integer> newListChild) {
-        for (int num : newListChild) {
-            if (x == num) {
-                return true;
-            }
-        }
-        return false;
-    }
-
 }

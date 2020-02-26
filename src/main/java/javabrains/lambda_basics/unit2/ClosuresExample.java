@@ -2,16 +2,16 @@ package javabrains.lambda_basics.unit2;
 
 public class ClosuresExample {
 
-    public static void main(String[] args) {
-        int a = 10;
-        int b = 20;
+  public static void main(String[] args) {
+    int a = 10;
+    int b = 20;
 
-        doProcess(a, i -> {
-            System.out.println(i + b);
-        });
-    }
+    doProcess(a, i -> {
+      System.out.println(i + b);
+    });
+  }
 
-    public static void doProcess(int i, Process p) {
-        p.process(i);
-    }
+  public static void doProcess(int i, Process p) {
+    p.process(i);
+  }
 }
