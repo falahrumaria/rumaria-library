@@ -1,14 +1,17 @@
 package rumaria;
 
-import java.math.BigDecimal;
-import java.util.*;
+import java.time.LocalDate;
+import java.util.List;
 
 public class Rumaria {
 
     public static void main(String[] args) {
-        System.out.println("mau nyoba carriage return\rini jadi di awal ");
-        System.out.println("mau nyoba carriage return\nini jadi di awal ");
-        System.out.println("mau nyoba carriage return\fini jadi di awal ");
+        String str = "my name is";
+        final String substring = str.substring(0, 3);
+        System.out.println(substring);
+        LocalDate today = LocalDate.now();
+        System.out.println(today);
+        System.out.println(today.plusDays(1));
         System.out.println("gaya busana".matches(".[abc].. ......"));
     }
 

@@ -8,6 +8,7 @@ public class ReadFileLineByLineUsingBufferedReader {
 
     public static void main(String[] args) {
         // the path of the root folder of this project
+        System.out.println("ini loh");
         System.out.println(System.getProperty("user.dir"));
         String filePath = System.getProperty("user.dir") + "\\text-input.txt";
         BufferedReader reader;

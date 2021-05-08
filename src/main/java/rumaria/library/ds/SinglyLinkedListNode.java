@@ -1,17 +1,11 @@
 package rumaria.library.ds;
 
-import edu.princeton.cs.algs4.StdOut;
-
 public class SinglyLinkedListNode {
     int data;
     SinglyLinkedListNode next;
 
     public SinglyLinkedListNode(int data) {
         this.data = data;
-    }
-
-    public static void main(String[] args) {
-        StdOut.println("opo yo");
     }
 
     public static SinglyLinkedListNode deleteOdd(SinglyLinkedListNode listHead) {
